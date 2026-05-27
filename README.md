@@ -601,10 +601,7 @@ O projeto pode ser expandido com:
 ## 👥 Equipe
 
 ```text
-[NOME DO ALUNO 1]
-[NOME DO ALUNO 2]
-[NOME DO ALUNO 3]
-[NOME DO ALUNO 4]
+ADERVAL SANTIAGO LEITE
 ```
 
 ---
@@ -612,8 +609,8 @@ O projeto pode ser expandido com:
 ## 🎓 Informações Acadêmicas
 
 ```text
-Instituição: [NOME DA INSTITUIÇÃO]
-Curso: [NOME DO CURSO]
+Instituição: CENTRO UNIVERSITÁRIO UNIRUY
+Curso: ANÁLISE E DESENVOLVIMENTO DE SISTEMAS
 Disciplina: Aplicação de Cloud, IoT e Indústria 4.0 em Python
 Professor: Prof. MSc Heleno Cardoso
 Ano: 2026
