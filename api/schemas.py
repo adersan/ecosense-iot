@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 
-
+ 
 class LeituraEntrada(BaseModel):
     sensor_id: str = Field(
         ...,
