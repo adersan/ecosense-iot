@@ -1,0 +1,8 @@
+#Usa sempre o status
+git status
+# 1. Prepara todos os arquivos modificados para o envio (coloca no "palco")
+git add .
+# 2. Salva as alterações no histórico local com uma mensagem descritiva
+git commit -m "mensagem explicando o que foi feito"
+# 3. Envia esse histórico salvo para o GitHub
+git push

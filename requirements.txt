@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+pandas
+streamlit
+plotly
+requests
+streamlit-autorefresh
+python-multipart
