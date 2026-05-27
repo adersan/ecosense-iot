@@ -1,0 +1,9 @@
+Link da simulação Wokwi:
+
+https://wokwi.com/projects/465196458808638465
+
+Observação:
+A simulação utiliza ESP32, MQTT, DHT22, potenciômetros, LEDs e buzzer.
+O ESP32 publica dados no tópico MQTT:
+
+ecosense/santiago/leituras
