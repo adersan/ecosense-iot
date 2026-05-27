@@ -64,7 +64,7 @@ def definir_status(
     return "NORMAL"
 
 def salvar_leitura(sensor_id: str, temperatura: float, umidade: float, co2: float, luminosidade: float):
-    """
+    """ 
     Salva uma nova leitura no banco de dados.
     """
     criar_banco()
