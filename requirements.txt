@@ -7,3 +7,4 @@ plotly
 requests
 streamlit-autorefresh
 python-multipart
+paho-mqtt

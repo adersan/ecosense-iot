@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "author": "EcoSense IoT",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 20,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -150,
+      "left": 360,
+      "attrs": {
+        "temperature": "28",
+        "humidity": "65"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potco2",
+      "top": 180,
+      "left": 360,
+      "attrs": {
+        "value": "512"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potluz",
+      "top": 330,
+      "left": 360,
+      "attrs": {
+        "value": "700"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledverdegeral",
+      "top": -140,
+      "left": -230,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledvermelhogeral",
+      "top": -80,
+      "left": -230,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledsala",
+      "top": 20,
+      "left": -230,
+      "attrs": {
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledlab",
+      "top": 80,
+      "left": -230,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledtecnica",
+      "top": 140,
+      "left": -230,
+      "attrs": {
+        "color": "orange"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledalmox",
+      "top": 200,
+      "left": -230,
+      "attrs": {
+        "color": "purple"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer1",
+      "top": 290,
+      "left": -230,
+      "attrs": {
+        "volume": "0.1"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rverdegeral",
+      "top": -130,
+      "left": -120,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rvermelhogeral",
+      "top": -70,
+      "left": -120,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rsala",
+      "top": 30,
+      "left": -120,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rlab",
+      "top": 90,
+      "left": -120,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rtecnica",
+      "top": 150,
+      "left": -120,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "ralmox",
+      "top": 210,
+      "left": -120,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    ["esp:3V3", "dht1:VCC", "red", []],
+    ["esp:GND.1", "dht1:GND", "black", []],
+    ["esp:D15", "dht1:SDA", "green", []],
+
+    ["esp:3V3", "potco2:VCC", "red", []],
+    ["esp:GND.1", "potco2:GND", "black", []],
+    ["esp:D34", "potco2:SIG", "blue", []],
+
+    ["esp:3V3", "potluz:VCC", "red", []],
+    ["esp:GND.1", "potluz:GND", "black", []],
+    ["esp:D35", "potluz:SIG", "orange", []],
+
+    ["esp:D26", "rverdegeral:1", "green", []],
+    ["rverdegeral:2", "ledverdegeral:A", "green", []],
+    ["ledverdegeral:C", "esp:GND.1", "black", []],
+
+    ["esp:D27", "rvermelhogeral:1", "red", []],
+    ["rvermelhogeral:2", "ledvermelhogeral:A", "red", []],
+    ["ledvermelhogeral:C", "esp:GND.1", "black", []],
+
+    ["esp:D18", "rsala:1", "blue", []],
+    ["rsala:2", "ledsala:A", "blue", []],
+    ["ledsala:C", "esp:GND.1", "black", []],
+
+    ["esp:D19", "rlab:1", "yellow", []],
+    ["rlab:2", "ledlab:A", "yellow", []],
+    ["ledlab:C", "esp:GND.1", "black", []],
+
+    ["esp:D21", "rtecnica:1", "orange", []],
+    ["rtecnica:2", "ledtecnica:A", "orange", []],
+    ["ledtecnica:C", "esp:GND.1", "black", []],
+
+    ["esp:D22", "ralmox:1", "purple", []],
+    ["ralmox:2", "ledalmox:A", "purple", []],
+    ["ledalmox:C", "esp:GND.1", "black", []],
+
+    ["esp:D25", "buzzer1:1", "purple", []],
+    ["buzzer1:2", "esp:GND.1", "black", []]
+  ],
+  "dependencies": {}
+}

@@ -40,7 +40,12 @@ def criar_banco():
     conexao.close()
 
 
-def definir_status(temperatura: float, umidade: float, co2: float) -> str:
+def definir_status(
+    temperatura: float,
+    umidade: float,
+    co2: float,
+    luminosidade: float = 1000
+) -> str:
     """
     Define se a leitura está em estado NORMAL ou ALERTA.
     """
@@ -53,8 +58,10 @@ def definir_status(temperatura: float, umidade: float, co2: float) -> str:
     if co2 > 1000:
         return "ALERTA"
 
-    return "NORMAL"
+    if luminosidade < 200:
+        return "ALERTA"
 
+    return "NORMAL"
 
 def salvar_leitura(sensor_id: str, temperatura: float, umidade: float, co2: float, luminosidade: float):
     """
@@ -65,7 +72,8 @@ def salvar_leitura(sensor_id: str, temperatura: float, umidade: float, co2: floa
     status = definir_status(
         temperatura=temperatura,
         umidade=umidade,
-        co2=co2
+        co2=co2,
+        luminosidade=luminosidade
     )
 
     timestamp = datetime.now().isoformat(timespec="seconds")
