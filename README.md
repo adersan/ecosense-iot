@@ -316,6 +316,7 @@ Toda mensagem recebida será enviada automaticamente para a API local.
 ### Wokwi — Rodar o ESP32
 
 1. Acesse o projeto no Wokwi.
+ - Link da simulação Wokwi: https://wokwi.com/projects/465196458808638465
 2. Abra o arquivo `sketch.ino`.
 3. Confirme o código do ESP32.
 4. Abra o arquivo `diagram.json`.
